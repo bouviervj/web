@@ -14,7 +14,7 @@ namespace web {
 			service_module_fibo(const std::string& iURL) : module_service<module_fibo>(iURL) {
 			}
 
-			virtual int execute(const std::string& iFunction, const std::vector<std::string>& iArgs, std::string& ioResult);
+			virtual int execute(http_context* iContext, std::string& ioResult);
 
 			ADD_RECORDED_SERVICE(service_module_fibo);
 

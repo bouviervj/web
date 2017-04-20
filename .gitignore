@@ -1,0 +1,10 @@
+CMakeCache.txt
+CMakeFiles
+Makefile
+cmake_install.cmake
+lib/CMakeFiles/
+lib/Makefile
+lib/cmake_install.cmake
+shared
+*.swp
+web

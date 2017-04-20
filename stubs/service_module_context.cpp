@@ -6,7 +6,7 @@ namespace web {
 
 	CREATE_RECORDED_SERVICE(service_module_context,"/module_context")
 
-	int service_module_context::execute(const std::string& iFunction, const std::vector<std::string>& iArgs, std::string& ioResult){
+	int service_module_context::execute(http_context* iContext , std::string& ioResult){
 
 		std::cout << " Execute service_module_context method." << std::endl ; 
 

@@ -2,6 +2,11 @@ CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
 
 PROJECT(web C CXX)
 
+set(CMAKE_C_COMPILER "/opt/gcc-4.3.2/bin/gcc" )
+set(CMAKE_CXX_COMPILER "/opt/gcc-4.3.2/bin/gcc" )
+
+SET( XERCESC_ROOT_DIR ../xerces )
+
 INCLUDE(find_cmake/FindXercesC.cmake)
 INCLUDE(find_cmake/FindMySQL.cmake)
 

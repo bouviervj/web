@@ -14,7 +14,7 @@ namespace web {
 			service_module_context(const std::string& iURL) : module_session_service<module_context>(iURL) {
 			}
 
-			virtual int execute(const std::string& iFunction, const std::vector<std::string>& iArgs, std::string& ioResult);
+			virtual int execute(http_context* iContext, std::string& ioResult);
 
 			ADD_RECORDED_SERVICE(service_module_context);
 

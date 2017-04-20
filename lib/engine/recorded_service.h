@@ -46,7 +46,8 @@ namespace web {
 
 			virtual void proceed(http_context* iContext);
 
-			virtual int execute(const std::string& iFunction, const std::vector<std::string>& iArgs, std::string& ioResult) = 0;
+			//virtual int execute(const std::string& iFunction, const std::vector<std::string>& iArgs, std::string& ioResult) = 0;
+                        virtual int execute(http_context* iContext, std::string& ioResult) = 0;
 
 			//virtual void returnDefinition(std::string& ioDefinition) = 0;
 
@@ -54,7 +55,7 @@ namespace web {
 
 			std::string getArgName(int i);
 
-			void decodePostBody(http_context* iContext, std::string& iFunction, std::vector<std::string>& iArguments);
+			//void decodePostBody(http_context* iContext, std::string& iFunction, std::vector<std::string>& iArguments);
 
 	};
 

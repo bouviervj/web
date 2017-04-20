@@ -65,13 +65,14 @@ namespace web {
 	}
 
 	SSL_CTX* http_secured_server::InitServerCTX(void)
-	{   const SSL_METHOD *method;
+	{   SSL_METHOD *method;
 	    SSL_CTX *ctx;
 
 	    OpenSSL_add_all_algorithms();  /* load & register all cryptos, etc. */
 	    SSL_load_error_strings();   /* load all error messages */
-	    method = TLSv1_2_server_method();  /* create new server-method instance */
-	    ctx = SSL_CTX_new(method);   /* create new context from method */
+	    //method = TLSv1_2_server_method();  /* create new server-method instance */
+	    method = SSLv23_server_method();
+            ctx = SSL_CTX_new(method);   /* create new context from method */
 	    if ( ctx == NULL )
 	    {
 		   ERR_print_errors_fp(stderr);

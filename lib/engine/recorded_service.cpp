@@ -75,7 +75,7 @@ namespace web {
 
 		//if (aCalledFunction!="") {
 
-			if (!execute(aCalledFunction, aArguments, aResult)) { 
+			if (!execute(iContext,aResult)) { 
 				iContext->_reply_code = 200;
 			} else { // ERROR
 				iContext->_reply_code = 400; // Bad Request
